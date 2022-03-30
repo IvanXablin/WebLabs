@@ -1,0 +1,62 @@
+
+body {
+    padding: 250px;
+}
+
+.main-block {
+    max-width: 835px;
+    margin: 0 auto;
+}
+
+.head-block h1 {
+    color: white;
+}
+
+.head-block {
+    background-color:#2f4f4f;
+    text-align: center;
+}
+
+.input-block input {
+    width: 371px;
+    height: 29px;
+}
+
+.input-block button {
+    width: 124px;
+    height: 35px;
+    margin-left: -5px;
+    color: gray;
+}
+
+.list ol li:hover {
+    background-color: rgba(128, 128, 128, 0.3);	
+}
+
+.list_el {
+    margin-left: -40px;
+    height: 24px;
+    position: relative;
+}
+
+.list img {
+    position: absolute;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+}
+
+.list img:hover {
+    width: 19px;
+    height: 19px;
+}
+
+.list {
+    max-width: 835px;
+    height: 150px;
+    font-size: 24px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    overflow: scroll;
+    overflow-x: hidden;   
+}

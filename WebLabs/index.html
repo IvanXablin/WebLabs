@@ -2,16 +2,24 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/app.js"></script>
     <title>Список дел</title>
 </head>
 <body>
-<h1>Список дел</h1>
-<input type="text" value="Новый элемент списка" />
-<button>Создать</button>
-<ol>
-    <li><input type="checkbox" />Полить кошку <button>x</button></li>
-    <li><input type="checkbox" />Почесать картошку <button>x</button></li>
-    <li><input type="checkbox" />Сложить в лукошко <button>x</button></li>
-</ol>
+    <div class="main-block">
+        <div class="head-block">
+            <h1>Список дел</h1>
+            <div class="input-block">
+                <input type="text" id="in" placeholder="Новый элемент списка..." />
+            <button id="add">Сохранить</button>
+            </div>           
+        </div>   
+    <div class="list">
+        <ul id="out">
+            
+        </ul>
+    </div>   
+    </div>   
 </body>
 </html>

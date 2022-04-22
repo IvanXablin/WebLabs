@@ -30,8 +30,6 @@ window.onload = function() {
         })
         
         result.appendChild(li);
-        const html = parent.innerHTML; 
-        localStorage.setItem('todo', html);
     }
 }       
 

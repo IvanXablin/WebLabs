@@ -1,7 +1,8 @@
-:focus,:active{outline: none;}
-ul li{list-style: none;}
+:focus, :active {outline: none;}
+ul li {list-style: none;}
 
 body {
+    background: #858585;
     padding: 250px;
 }
 
@@ -51,6 +52,10 @@ body {
     position: relative;
 }
 
+.list span {
+    padding-left: 3px;
+}
+
 .list img {
     position: absolute;
     right: 10px;
@@ -63,15 +68,11 @@ body {
     height: 25px;
 }
 
-ul li.checked::before {
-    position: absolute;
-    border-color: green;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 4px;
-    left: -17px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+.checked {
+    border: 1px solid green;
+    border-radius: 10px;
 }
+
+
+
 

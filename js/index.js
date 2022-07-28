@@ -19,7 +19,7 @@ function ManipulateElement(value) {
 
     div.className = 'item';
     span.textContent = value;  
-    img.src = '/media/img/icons8-trash-64.png';
+    img.src = 'media/img/icons8-trash-64.png';
 
     div.appendChild(span);
     div.appendChild(img);

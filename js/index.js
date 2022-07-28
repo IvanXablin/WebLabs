@@ -1,41 +1,39 @@
 window.onload = function() {
-    
-    const input = document.querySelector('#in');
-    const btn = document.querySelector('#add');
-    const result = document.querySelector('#out');
 
-    btn.addEventListener('click', (e) => {
-        if (input.value === '') { return; }
-        ManipulateElement(input.value);
+const newTaskInput = document.querySelector('#new-task');
+const addButton = document.querySelector('#add');
+const result = document.querySelector('.main__list');
+
+addButton.addEventListener('click', (e) => {
+    if (newTaskInput.value === '') { 
+        return; 
+    }
+    ManipulateElement(newTaskInput.value);
+})
+
+function ManipulateElement(value) {
+
+    const div = document.createElement('div');
+    const span = document.createElement('span');
+    const img = document.createElement('img');
+
+    div.className = 'item';
+    span.textContent = value;  
+    img.src = '/media/img/icons8-trash-64.png';
+
+    div.appendChild(span);
+    div.appendChild(img);
+
+    img.addEventListener('click', (e) => {  
+        result.removeChild(div);
     })
 
+    div.addEventListener('click', (e) => {
+        div.classList.toggle('done');           
+    })
     
-    function ManipulateElement(value) {
+    newTaskInput.value = '';
+    result.appendChild(div);
+}
 
-        const li = document.createElement('li');
-        const img = document.createElement('img');
-        const span = document.createElement('span');
-
-        li.className = 'list_el';
-        span.textContent = value;  
- 
-        img.className = 'delete';
-        img.src = 'img/cross.png';
-
-        li.appendChild(span);
-        li.appendChild(img);
-
-        img.addEventListener('click', (e) => {  
-            result.removeChild(li);
-        })
-
-        li.addEventListener('click', (e) => {
-            li.classList.toggle('checked');           
-        })
-        
-        result.appendChild(li);
-    }
-}       
-
-
-
+}
